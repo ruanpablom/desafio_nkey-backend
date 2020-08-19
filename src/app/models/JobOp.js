@@ -22,11 +22,10 @@ const JobOpSchema = new mongoose.Schema({
       type: Number,
       required: true,
     },
-    tags: {
-      type: [String],
-    },
-    timestamps: true,
+  },
+  tags: {
+    type: [String],
   },
 });
 
-export default mongoose.model('Vaga', JobOpSchema);
+export default mongoose.model('JobOp', JobOpSchema);
