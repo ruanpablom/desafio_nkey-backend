@@ -6,7 +6,14 @@
   "repository": "git@github.com:ruanpablom/desafio_nkey-backend.git",
   "author": "Ruan Pablo Medeiros <pm.ruan@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "scripts": {
+    "dev" : "nodemon src/app.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.16.1",
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.10.0"
+  },
   "devDependencies": {
     "eslint": "^7.7.0",
     "eslint-config-airbnb-base": "^14.2.0",
