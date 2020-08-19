@@ -11,7 +11,19 @@ export default {
 
       return jobOp;
     },
+    jobOps: async () => {
+      const jobOps = await JobOp.find({});
+
+      if (!jobOps) {
+        return {
+          error: 'There are no Job Opportunities',
+        };
+      }
+
+      return jobOps;
+    },
   },
+
   Mutation: {
     addJobOp: async (_, { jobOpInput }) => {
       const jobOp = await JobOp.create(jobOpInput);

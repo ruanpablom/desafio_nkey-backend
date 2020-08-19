@@ -15,10 +15,6 @@ const typeDefs = gql`
     max: Float!
   }
 
-  type Query {
-    jobOp(id: ID!): JobOp
-  }
-
   input JobSalaryInput {
     min: Float!
     max: Float!
@@ -44,6 +40,11 @@ const typeDefs = gql`
     addJobOp(jobOpInput: JobOpInput): JobOp
     updateJobOp(id: ID!, jobOpInputUpdate: JobOpInputUpdate): Boolean
     deleteJobOp(id: ID!): Boolean
+  }
+
+  type Query {
+    jobOp(id: ID!): JobOp
+    jobOps: [JobOp]
   }
 `;
 
