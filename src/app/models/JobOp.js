@@ -13,7 +13,7 @@ const JobOpSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  jobSalary: {
+  salaryRange: {
     min: {
       type: Number,
       required: true,
@@ -23,8 +23,16 @@ const JobOpSchema = new mongoose.Schema({
       required: true,
     },
   },
-  tags: {
+  requirements: {
     type: [String],
+  },
+  experience: {
+    type: String,
+    required: true,
+  },
+  ocupation: {
+    type: String,
+    required: true,
   },
 });
 

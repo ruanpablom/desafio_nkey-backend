@@ -6,16 +6,18 @@ const typeDefs = gql`
     title: String!
     description: String!
     location: String!
-    jobSalary: JobSalary!
-    tags: [String]
+    salaryRange: SalaryRange!
+    requirements: [String]
+    experience: String!
+    ocupation: String
   }
 
-  type JobSalary {
+  type SalaryRange {
     min: Float!
     max: Float!
   }
 
-  input JobSalaryInput {
+  input SalaryRangeInput {
     min: Float!
     max: Float!
   }
@@ -24,16 +26,20 @@ const typeDefs = gql`
     title: String!
     description: String!
     location: String!
-    jobSalary: JobSalaryInput!
-    tags: [String]
+    salaryRange: SalaryRangeInput!
+    requirements: [String]
+    experience: String!
+    ocupation: String!
   }
 
   input JobOpInputUpdate {
     title: String
     description: String
     location: String
-    jobSalary: JobSalaryInput
-    tags: [String]
+    salaryRange: SalaryRangeInput
+    requirements: [String]
+    experience: String
+    ocupation: String
   }
 
   type Mutation {
